@@ -21,7 +21,7 @@ public class WebMvcApplication {
 
 
     @Configuration
-    public static   class WebConfig extends WebMvcConfigurerAdapter {
+    public static class WebConfig extends WebMvcConfigurerAdapter {
 
         @Autowired
         private ThymeleafViewResolver thymeleafResolver;

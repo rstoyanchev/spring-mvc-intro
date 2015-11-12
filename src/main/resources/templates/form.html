@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<form action="#" th:action="@{/form}" th:object="${formBean}" method="post">
+
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <ul><li th:each="err : ${#fields.errors('name')}" th:text="${err}" /></ul>
+
+    <p>Age: <input type="text" th:field="*{age}" /></p>
+    <ul><li th:each="err : ${#fields.errors('age')}" th:text="${err}" /></ul>
+
+    <p>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+    </p>
+</form>
+
+</body>
+</html>
